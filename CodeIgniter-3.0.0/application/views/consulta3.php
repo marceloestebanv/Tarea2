@@ -7,26 +7,28 @@
 <body>
 
 <?php
-$mysqli = new mysqli("localhost", "root", "", "employees");
-if ($mysqli->connect_errno) {
-    echo "Fallo al contenctar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+$con=mysqli_connect("localhost","root","","employees");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
+$sql="SELECT first_name,last_name FROM employees ORDER BY Lastname LIMIT 0,30";
+$result=mysqli_query($con,$sql)
 
+// Numeric array
+$row = mysqli_fetch_array($result,MYSQLI_NUM);
+printf ("Nombre:%s Apellido: %s\n",$row[0],$row[1]);
 
-$resultado = $mysqli->query('SELECT * FROM titles where title = "Senior Staff" ');
+// Associative array
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+printf ("%s (%s)\n",$row["first_name"],$row["last_name"]);
 
-/* saltar a la fila numero 400 */
-$resultado->data_seek(399);
+// Free result set
+mysqli_free_result($result);
 
-/* obtener fila */
-    $row = $resultado->fetch_row();
-
-    printf ("Numero: %s  Titles: %s From_date: %s   To_date: %s\n", $row[0] , $row[1] , $row[2] , $row[3]);
-
-    /* librar resultados */
-    $resultado->close();
-
-?>
+mysqli_close($con);
+?> 
 </body>
 </html>
