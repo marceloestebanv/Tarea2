@@ -18,8 +18,16 @@ class Controlerbuton3 extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	
+	public function __construct()
+    {
+    parent::__construct();
+    $this->load->model('consultas_model');
+    }
+
 	public function index()
 	{
-		$this->load->view('consulta3');
+		$data['datos'] = $this->consultas_model->consultaPro();
+		$this->load->view('consulta3',$data);
 	}
 }

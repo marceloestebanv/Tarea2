@@ -15,5 +15,11 @@ class Consultas_model extends CI_model {
 		if ($query->num_rows() > 0 ) return $query;
 		else return false;		
 	}
+
+	function consultaPro(){
+		$query = $this->db->query("SELECT a.first_name, a.last_name, s.salary, d.dept_name, t.title FROM employees a, salaries s, titles t, departments d, dept_emp e WHERE a.emp_no=s.emp_no and a.emp_no=e.emp_no and e.dept_no=d.dept_no and s.to_date between str_to_date ('1900-01-01','%Y-%m-%d') and str_to_date ('2000-01-01','%Y-%m-%d') and t.emp_no=a.emp_no and t.title='Senior Engineer' group by a.last_name");
+		if($query->num_rows() > 0) return $query;
+		else return false;
+	}
 	
 }
