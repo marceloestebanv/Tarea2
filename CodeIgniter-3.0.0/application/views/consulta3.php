@@ -7,8 +7,19 @@
 <body>
 
 <?php
+<<<<<<< HEAD
 
 
 
+=======
+foreach ($datos->result() as $empleados) { 
+	echo "<ul>";
+		echo "<li>";
+			echo "$empleados->last_name | $empleados->first_name | $empleados->salary | $empleados->dept_name | $empleados->title";
+		echo "</li>";
+	echo "</ul>";
+ } ?>
+
+>>>>>>> origin/master
 </body>
 </html>
