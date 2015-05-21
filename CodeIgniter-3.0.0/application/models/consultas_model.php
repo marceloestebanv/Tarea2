@@ -8,10 +8,16 @@ class Consultas_model extends CI_model {
         $this->load->database();
         }
 
-		
-	function obtenerEmpleados(){
-		
-		$query = $this->db->query('SELECT last_name from employees LIMIT 0,30');
+	
+    function obtenerEmpleados(){
+		$query = $this->db->query('SELECT emp_no FROM employees where gender = "M" OR first_name = "Mary"');
+		if ($query->num_rows() > 0 ) return $query;
+		else return false;		
+	}    
+
+
+	function obtenerSalarios(){
+		$query = $this->db->query('SELECT emp_no, salary FROM salaries where salary ="88208" OR salary= "40000"');
 		if ($query->num_rows() > 0 ) return $query;
 		else return false;		
 	}

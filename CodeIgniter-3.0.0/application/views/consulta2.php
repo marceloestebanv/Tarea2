@@ -7,12 +7,14 @@
 <body>
 
 <?php
-foreach ($empleados->result() as $empleados) { 
+
+foreach ($salarios->result() as $salarios) { 
 	echo "<ul>";
 		echo "<li>";
-			echo "$empleados->last_name";
+			echo "$salarios->emp_no | $salarios->salary";
 		echo "</li>";
 	echo "</ul>";
  } ?>
+ 
 </body>
 </html>

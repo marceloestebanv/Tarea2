@@ -8,10 +8,9 @@ class Controlerbuton2 extends CI_Controller {
     $this->load->model('consultas_model');
     }
 	
-
 	public function index()
 	{
-		$data['empleados'] = $this->consultas_model->obtenerEmpleados();
+		$data['salarios'] = $this->consultas_model->obtenerSalarios();
 		$this->load->view('consulta2',$data);
 	}
 }
