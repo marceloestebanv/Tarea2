@@ -9,4 +9,7 @@
 \contentsline {subsection}{\numberline {0.1.6}Base de Datos utilizada}{9}{subsection.0.1.6}
 \contentsline {section}{\numberline {0.2}Definici\IeC {\'o}n de la tarea}{10}{section.0.2}
 \contentsline {section}{\numberline {0.3}Consultas B\IeC {\'a}sicas a la base de datos mediante una interf\IeC {\'a}z web}{10}{section.0.3}
-\contentsline {chapter}{Bibliograf\'{\i }a}{11}{chapter*.5}
+\contentsline {subsubsection}{Consulta 1}{10}{section*.5}
+\contentsline {subsubsection}{Consulta 2}{11}{section*.6}
+\contentsline {subsubsection}{Consulta 3}{12}{section*.7}
+\contentsline {chapter}{Bibliograf\'{\i }a}{14}{chapter*.8}
