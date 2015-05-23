@@ -132,6 +132,20 @@ Luego de realizar las respectivas pruebas de cargas, se optó por modificar las 
 
 \section{Pruebas de carga a la iteración 1}
 
+La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
+en un segundo y un ciclo de pruebas.\\
+
+Los resultados obtenidos son los siguientes:
+
+\begin{figure}[htb]
+	\label{Figura10}
+	\begin{center}
+		\includegraphics[scale=0.7]{imagenes/iteracion0-maneravieja.png}
+		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+	\end{center}
+\end{figure}
+
+
 \section{Iteración 2 (Utilizando CodeIgniter)}
 
 Debido a que este Framework ofrece la utilización del Modelo - Vista - Controlador, nos parece pertinente utilizar esta arquitectura, por lo cual se adapta completamente la forma en la que se se escribe el código de este proyecto. \\
@@ -152,11 +166,53 @@ Posteriormente cuando el usuario presiona un botón para llevar a cabo las consu
  
  \section{Pruebas de carga realizadas a la iteración 2}
  
+ La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
+ en un segundo y un ciclo de pruebas.\\
+ 
+ Los resultados obtenidos son los siguientes:
+ 
+ \begin{figure}[htb]
+ 	\label{Figura12}
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{imagenes/iteracion1-mviejaOpSql.png}
+ 		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+ 	\end{center}
+ \end{figure}
+ 
  \section{Iteración 3 (Utilizando la opción de Cachè en CodeIgniter))}
  
  Como además CodeIgniter ofrece la utilización de Cachè, las consultas obendrá un mejor desempeño, ya que luego de realizar una de las query, los datos estarán "Cacheados" por lo cual, las posteriores consultas deberían resultar ser mas rápidas. 
  
  \section{Pruebas de carga realizadas a la iteración 3}
  
- \section{Iteración 4 (Paginación de los resultados de las query)}  
+ La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
+ en un segundo y un ciclo de pruebas.\\
+ 
+ Los resultados obtenidos son los siguientes:
+ 
+ \begin{figure}[htb]
+ 	\label{Figura13}
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{imagenes/iteracion2-codeigniter.png}
+ 		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+ 	\end{center}
+ \end{figure}
+ 
+\section{Iteración 4 (Paginación de los resultados de las query)}  
+
+\section{Pruebas de carga realizadas a la iteración 4}
+
+La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
+en un segundo y un ciclo de pruebas.\\
+
+Los resultados obtenidos son los siguientes:
+
+\begin{figure}[htb]
+	\label{Figura14}
+	\begin{center}
+		\includegraphics[scale=0.7]{imagenes/iteracion3-cacheCodeIgniter.png}
+		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+	\end{center}
+\end{figure}
+
 
