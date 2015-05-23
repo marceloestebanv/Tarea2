@@ -12,4 +12,12 @@
 \contentsline {subsubsection}{Consulta 1}{10}{section*.5}
 \contentsline {subsubsection}{Consulta 2}{11}{section*.6}
 \contentsline {subsubsection}{Consulta 3}{12}{section*.7}
-\contentsline {chapter}{Bibliograf\'{\i }a}{14}{chapter*.8}
+\contentsline {section}{\numberline {0.4}Pruebas realizadas a la iteraci\IeC {\'o}n 0}{13}{section.0.4}
+\contentsline {section}{\numberline {0.5}Iteraci\IeC {\'o}n 1 ( Mejorando las consultas MySql)}{14}{section.0.5}
+\contentsline {section}{\numberline {0.6}Pruebas de carga a la iteraci\IeC {\'o}n 1}{15}{section.0.6}
+\contentsline {section}{\numberline {0.7}Iteraci\IeC {\'o}n 2 (Utilizando CodeIgniter)}{15}{section.0.7}
+\contentsline {section}{\numberline {0.8}Pruebas de carga realizadas a la iteraci\IeC {\'o}n 2}{16}{section.0.8}
+\contentsline {section}{\numberline {0.9}Iteraci\IeC {\'o}n 3 (Utilizando la opci\IeC {\'o}n de Cach\IeC {\`e} en CodeIgniter))}{16}{section.0.9}
+\contentsline {section}{\numberline {0.10}Pruebas de carga realizadas a la iteraci\IeC {\'o}n 3}{16}{section.0.10}
+\contentsline {section}{\numberline {0.11}Iteraci\IeC {\'o}n 4 (Paginaci\IeC {\'o}n de los resultados de las query)}{16}{section.0.11}
+\contentsline {chapter}{Bibliograf\'{\i }a}{17}{chapter*.8}
