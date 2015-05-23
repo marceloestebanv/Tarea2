@@ -5,7 +5,7 @@
 <meta charset='utf-8'>
 </head>
 <body>
-
+ ola ke ase
 <?php
 
 foreach ($empleados->result() as $empleados) {
