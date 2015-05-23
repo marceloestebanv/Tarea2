@@ -10,14 +10,14 @@ class Consultas_model extends CI_model {
 
 	
     function obtenerEmpleados(){
-		$query = $this->db->query('SELECT emp_no FROM employees where gender = "M" OR first_name = "Mary"');
+		$query = $this->db->query('SELECT * FROM employees where gender = "M" OR first_name = "Mary"');
 		if ($query->num_rows() > 0 ) return $query;
 		else return false;		
 	}    
 
 
 	function obtenerSalarios(){
-		$query = $this->db->query('SELECT emp_no, salary FROM salaries where salary IN("88208","40000")';
+		$query = $this->db->query('SELECT emp_no, salary FROM salaries where salary ="88208" OR salary = "40000"');
 		if ($query->num_rows() > 0 ) return $query;
 		else return false;		
 	}
