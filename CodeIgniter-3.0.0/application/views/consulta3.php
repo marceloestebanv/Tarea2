@@ -15,6 +15,8 @@ foreach ($empleados->result() as $empleados) {
 		echo "</li>";
 	echo "</ul>";
  } ?>
+ 
+ <p>hola soy el nico</p>
 
 </body>
 </html>
