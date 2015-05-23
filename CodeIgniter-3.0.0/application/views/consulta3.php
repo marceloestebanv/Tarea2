@@ -5,9 +5,8 @@
 <meta charset='utf-8'>
 </head>
 <body>
- ola ke ase
-<?php
 
+<?php
 foreach ($empleados->result() as $empleados) {
 	echo "<ul>";
 		echo "<li>";
@@ -15,8 +14,6 @@ foreach ($empleados->result() as $empleados) {
 		echo "</li>";
 	echo "</ul>";
  } ?>
- 
- <p>hola soy el nico</p>
 
 </body>
 </html>
