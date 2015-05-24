@@ -7,14 +7,14 @@
 \BOOKMARK [2][-]{subsection.0.1.5}{Jmeter}{section.0.1}% 7
 \BOOKMARK [2][-]{subsection.0.1.6}{Base de Datos utilizada}{section.0.1}% 8
 \BOOKMARK [1][-]{section.0.2}{Definici\363n de la tarea}{chapter*.1}% 9
-\BOOKMARK [1][-]{section.0.3}{Consultas B\341sicas a la base de datos mediante una interf\341z web}{chapter*.1}% 10
-\BOOKMARK [1][-]{section.0.4}{Pruebas realizadas a la iteraci\363n 0}{chapter*.1}% 11
-\BOOKMARK [1][-]{section.0.5}{Iteraci\363n 1 \( Mejorando las consultas MySql\)}{chapter*.1}% 12
-\BOOKMARK [1][-]{section.0.6}{Pruebas de carga a la iteraci\363n 1}{chapter*.1}% 13
-\BOOKMARK [1][-]{section.0.7}{Iteraci\363n 2 \(Utilizando CodeIgniter\)}{chapter*.1}% 14
-\BOOKMARK [1][-]{section.0.8}{Pruebas de carga realizadas a la iteraci\363n 2}{chapter*.1}% 15
-\BOOKMARK [1][-]{section.0.9}{Iteraci\363n 3 \(Utilizando la opci\363n de Cach\350 en CodeIgniter\)\)}{chapter*.1}% 16
-\BOOKMARK [1][-]{section.0.10}{Pruebas de carga realizadas a la iteraci\363n 3}{chapter*.1}% 17
-\BOOKMARK [1][-]{section.0.11}{Iteraci\363n 4 \(Paginaci\363n de los resultados de las query\)}{chapter*.1}% 18
-\BOOKMARK [1][-]{section.0.12}{Pruebas de carga realizadas a la iteraci\363n 4}{chapter*.1}% 19
-\BOOKMARK [0][-]{chapter*.8}{Bibliograf\355a}{}% 20
+\BOOKMARK [1][-]{section.0.3}{Consultas B\341sicas}{chapter*.1}% 10
+\BOOKMARK [2][-]{subsection.0.3.1}{Consulta 1}{section.0.3}% 11
+\BOOKMARK [2][-]{subsection.0.3.2}{Consulta 2}{section.0.3}% 12
+\BOOKMARK [2][-]{subsection.0.3.3}{Consulta 3}{section.0.3}% 13
+\BOOKMARK [1][-]{section.0.4}{Pruebas de carga}{chapter*.1}% 14
+\BOOKMARK [2][-]{subsection.0.4.1}{Iteraci\363n 1}{section.0.4}% 15
+\BOOKMARK [2][-]{subsection.0.4.2}{Iteraci\363n 2 \( Mejorando las consultas MySql\)}{section.0.4}% 16
+\BOOKMARK [2][-]{subsection.0.4.3}{Iteraci\363n 3 \(Utilizando CodeIgniter\)}{section.0.4}% 17
+\BOOKMARK [2][-]{subsection.0.4.4}{Iteraci\363n 4 \(Utilizando la opci\363n de Cach\350 en CodeIgniter\)\)}{section.0.4}% 18
+\BOOKMARK [2][-]{subsection.0.4.5}{Iteraci\363n 5 \(Paginaci\363n de los resultados de las query\)}{section.0.4}% 19
+\BOOKMARK [0][-]{chapter*.10}{Bibliograf\355a}{}% 20

@@ -1,0 +1,76 @@
+\documentclass[12pt,letterpaper]{report}
+
+\marginparsep 0pt
+\textwidth 6in
+\topmargin 0pt
+\headsep .5in
+\textheight 9.2in
+\voffset = 0pt
+\hoffset = 0pt
+\marginparwidth = 0pt \oddsidemargin = 0pt \sloppy
+
+%Dimensiones de la página
+\usepackage[left=2.5cm,top=3cm,right=2.5cm,bottom=2.5cm]{geometry}
+%Sangría
+\setlength{\parindent}{1cm}
+
+%Numeracion
+\pagenumbering{arabic}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[dvips]{epsfig}
+\usepackage[dvips]{graphicx}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage[]{fontenc}
+\usepackage{times}
+\usepackage[usenames]{color}
+\usepackage{templateICI}
+\usepackage{amsmath,amsfonts}
+\newcommand{\ie}{i.e.}
+\newcommand {\out}[1]{}
+\newtheorem{definicion}{Definicion}
+\usepackage{array}
+\usepackage{hyperref}
+\renewcommand{\shorthandsspanish}{}
+\addto\captionsspanish{
+\def\listtablename{Índice de tablas}
+\def\tablename{Tabla}}
+
+\sloppy
+
+\begin{document}
+\title{\textbf{Desarrollo de Aplicaciones Web}}
+\author{\textbf{Marcelo Esteban Verdugo Reyes \\ Nicolás Albornoz Reyes}}
+\principaladviser{Eliana Paz Providel Godoy}
+\coprincipaladviser{Nombre Profesor Correferente}
+\firstreader{Nombre Profesor Informante 1}
+
+\beforepreface
+\prefacesection{Resumen}
+El siguiente trabajo tiene como objetivo adquirir conocimientos acerca de el desarrollo de aplicaciones web, por lo cual, en esta tarea se trabajó con el lenguaje PHP, HTML, Mysql, un framework de PHP CodeIgniter y con la herramienta Jmeter \\
+
+En este trabajo se realizaron tres consultas a una base de datos, las que posteriormente se mejoraron, bajo diferentes maneras, las cuales se verán en este documento. \\ 
+Las mejoras se analizaron realizando pruebas de carga con la herramienta Jmeter.
+
+
+\renewcommand{\thepage}{\roman{page}}
+\tableofcontents
+\newpage
+\listoftables
+\listoffigures
+\newpage
+
+%Aqui deben incluir el fuente de cada capitulo, sin su encabezado.
+\renewcommand{\thepage}{\arabic{page}}
+\include{intr}
+\include{marco}
+\include{def}
+\bibliographystyle{plain}
+\bibliography{informe,terminologia}
+
+\end{document} 

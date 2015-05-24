@@ -6,10 +6,10 @@ Posteriormente realizadas estas query se deben realizar 5 iteraciones para ompti
 
 Finalmente realizadas las iteraciones que buscan otpimizar las solicitudes. Se debe realizar una pruebas de carga con la herramienta Jmeter. Estas pruebas buscan estudiar el comportamiento de estas mismas consultas optimizadas pero suponiendo que varios usuarios accederán a ellas en un tiempo simultaneo. Cabe mencionar que las pruebas se deben realizar en un entorno "limpio", es decir, suponer que el dispositivo del usuario no se ve afectado por otros programas o por otros problemas de rendimiento. \\
 
-\section{Consultas Básicas a la base de datos mediante una interfáz web}
+\section{Consultas Básicas}
 
 En un comienzo se realizó una interfaz web simple, la cual cuenta con 3 botones, en donde cada botón al presionarlo genera una consulta a la base de datos \textbf{"employees"} como se muestra en las siguientes figuras \ref{Figura2}, \ref{Figura4}, \ref{Figura6}. \\ 
-Cabe mencionar que cada una de estas query se realiza de forma inmediata luego de presionar el botón, y no de la forma en que trabaja CodeIgniter ( Modelo-Vistra-Controlador). \\
+Cabe mencionar que cada una de estas query se realiza de forma inmediata luego de presionar el botón, y no de la forma en que trabaja CodeIgniter ( Modelo-Vista-Controlador). \\
 Además previo a realizar cada consulta se realizan las siguientes acciones: 
 
 \begin{figure}[htb]
@@ -28,7 +28,9 @@ Además previo a realizar cada consulta se realizan las siguientes acciones:
 	\caption{Figura de la interfáz de inicio de la página web de consultas.}
 \end{figure}
 
-\subsubsection{Consulta 1}
+\newpage
+
+\subsection{Consulta 1}
 
 El usuario al presionar el botón "Consulta 1" se realiza la siguiente query:
 
@@ -36,6 +38,7 @@ El usuario al presionar el botón "Consulta 1" se realiza la siguiente query:
 	\label{Figura2}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagenes/query1.png}
+		\caption{Query consulta 1 iteración 1.}
 	\end{center}
 \end{figure}
 
@@ -46,12 +49,14 @@ Los resultados entregados por el servidor son los que se muestran en la figura \
 \begin{figure}[htb]
 	\label{Figura3}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagenes/resultado1.png}
+		\includegraphics[scale=0.3]{imagenes/resultado1.png}
 		\caption{Figura que muestra el resultado obtenido desde el servidor, en donde se muestran algunos números de empleados.}
 	\end{center}
 \end{figure}
 
-\subsubsection{Consulta 2}
+\newpage
+
+\subsection{Consulta 2}
 
 El usuario al presionar el botón "Consulta 2" se realiza la siguiente query:
 
@@ -74,7 +79,9 @@ Los resultados entregados por el servidor son los que se muestran en la figura \
 	\end{center}
 \end{figure}
 
-\subsubsection{Consulta 3}
+\newpage
+
+\subsection{Consulta 3}
 
 El usuario al presionar el botón "Consulta 3" se realiza la siguiente query:
 
@@ -85,7 +92,7 @@ El usuario al presionar el botón "Consulta 3" se realiza la siguiente query:
 	\end{center}
 \end{figure}
 
-Esta consulta solicita a la base de datos el "emp\_no" o número de empleado, de los cuales su genero es "M" o masculino, O también el número de empleados cuyo nombre sea "Mary".
+Esta consulta solicita a 5 tablas de la base de datos, los campos first\_name, last\_name, salary, dept\_name y title.
 
 Los resultados entregados por el servidor son los que se muestran en la figura \ref{Figura7}:
 
@@ -97,8 +104,10 @@ Los resultados entregados por el servidor son los que se muestran en la figura \
 	\end{center}
 \end{figure}
 
-\section{Pruebas realizadas a la iteración 0}
- 
+\newpage
+
+\section{Pruebas de carga}
+
  En la siguiente sección se muestran los resultados de las pruebas de carga realizadas con la herramienta Jmeter, para realizar estas pruebas se levantó un servidor utilizando Virtual Box con el fin de obtener resultados en un ambiente controlado, libre de otros procesos o programas que puedan interferir en la memoria de nuestro equipo. \cite{jmeter} \\
  
  La maquina virtualizada tiene las siguientes carácteristicas:
@@ -106,47 +115,73 @@ Los resultados entregados por el servidor son los que se muestran en la figura \
  \begin{figure}[htb]
  	\label{Figura8}
  	\begin{center}
- 		\includegraphics[scale=0.7]{imagenes/sistema.png}
+ 		\includegraphics[scale=0.5]{imagenes/sistema.png}
  		\caption{Figura que muestra las carácteristicas de la maquina virtual utilizada.}
  	\end{center}
  \end{figure}
- 
-Los resultados obtenidos para la consulta 1 fueron los siguientes: 
 
-Los resultados obtenidos para la consulta 2 fueron los siguientes: 
 
-Los resultados obtenidos para la consulta 3 fueron los siguientes: 
+\subsection{Iteración 1}
+
+Se realizan las pruebas de carga a la primera iteración.
+
+\subsubsection{Pruebas de carga a la iteración 1}
+
+La prueba se configuro bajo las siguientes condiciones
+
+\begin{itemize}
+	\item Número de hilos: 20
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
  
-\section{Iteración 1 ( Mejorando las consultas MySql)} 
+Los resultados obtenidos para las consultas fueron los siguientes:
+
+ \begin{figure}[htb]
+ 	\label{Figura8}
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{imagenes/ite1.png}
+ 		\caption{Tabla resumen iteración 1}
+ 	\end{center}
+ \end{figure}
+ 
+\subsection{Iteración 2 ( Mejorando las consultas MySql)} 
 
 Luego de realizar las respectivas pruebas de cargas, se optó por modificar las query MySql, en donde: 
 
 
 \begin{itemize}
-	\item Consulta 1: En la cosnulta 1, se solicita al servidor todos los atributos de la tabla 'employees' ya que se realiza de la forma "SELECT * FROME employees" y donde finalmente se muestra solo "emp\_no" ( Numero de empleado). Por lo cual una mejora a esta query sería solicitar solamente lo que necesitamos, es decir, "emp\_no".\\
+	\item Consulta 1: En la consulta 1, se solicita al servidor todos los atributos de la tabla 'employees' ya que se realiza de la forma "SELECT * FROME employees" y donde finalmente se muestra solo "emp\_no" ( Numero de empleado). Por lo cual una mejora a esta query sería solicitar solamente lo que necesitamos, es decir, "emp\_no".\\
 	
 	\item Consulta 2: En esta consulta se utiliza el operador lógico OR, el cual investigando, se puede mejorar utilizando el operador IN, ell cual entrega un mejor performance al momento de realizar una query.\\
 	
-	\item Consulta 3: 
+	\item Consulta 3: Se utiliza INNER JOIN por sobre la comparación con la sentencia WHERE, la cual se espera tenga un mejor rendimiento.
 \end{itemize}
 
-\section{Pruebas de carga a la iteración 1}
+\subsubsection{Pruebas de carga a la iteración 2}
 
-La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
-en un segundo y un ciclo de pruebas.\\
+La prueba se configuro bajo las siguientes condiciones
+
+\begin{itemize}
+	\item Número de hilos: 20
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
 
 Los resultados obtenidos son los siguientes:
 
 \begin{figure}[htb]
 	\label{Figura10}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagenes/iteracion0-maneravieja.png}
-		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+		\includegraphics[scale=0.6]{imagenes/ite2.png}
+		\caption{Tabla resumen iteración 2}
 	\end{center}
 \end{figure}
 
+Se puede observar leves mejoras frente a la iteración 1, por lo que los supuestos se han cumplido.
 
-\section{Iteración 2 (Utilizando CodeIgniter)}
+
+\subsection{Iteración 3 (Utilizando CodeIgniter)}
 
 Debido a que este Framework ofrece la utilización del Modelo - Vista - Controlador, nos parece pertinente utilizar esta arquitectura, por lo cual se adapta completamente la forma en la que se se escribe el código de este proyecto. \\
 
@@ -164,55 +199,89 @@ Posteriormente cuando el usuario presiona un botón para llevar a cabo las consu
  
  Usando CodeIgniter además nos ahorramos realizar las conexiones a la base de datos, ya que internamente se configura la base de datos que se utilizará. 
  
- \section{Pruebas de carga realizadas a la iteración 2}
+\subsubsection{Pruebas de carga realizadas a la iteración 3}
  
- La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
- en un segundo y un ciclo de pruebas.\\
+La prueba se configuro bajo las siguientes condiciones
+
+\begin{itemize}
+	\item Número de hilos: 20
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
+
+Los resultados no son los esperados y las pruebas no logran tener exito, por lo que se decide cambiar las condiciones de las pruebas, a las siguientes:
+
+\begin{itemize}
+	\item Número de hilos: 10
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
  
- Los resultados obtenidos son los siguientes:
+Los resultados obtenidos son los siguientes:
  
  \begin{figure}[htb]
  	\label{Figura12}
  	\begin{center}
- 		\includegraphics[scale=0.7]{imagenes/iteracion1-mviejaOpSql.png}
- 		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+ 		\includegraphics[scale=0.6]{imagenes/ite3.png}
+ 		\caption{Tabla resumen iteración 3}
  	\end{center}
  \end{figure}
+
+ Se concluye de estas pruebas que la implementación con CodeIgniter no presenta mejoras frente a las iteraciones anteriores. De todas formas la siguiente iteración se planteara como mejora utilizar la opción de cacheado de CogeIgniter.
  
- \section{Iteración 3 (Utilizando la opción de Cachè en CodeIgniter))}
+ \subsection{Iteración 4 (Utilizando la opción de Cachè en CodeIgniter))}
  
- Como además CodeIgniter ofrece la utilización de Cachè, las consultas obendrá un mejor desempeño, ya que luego de realizar una de las query, los datos estarán "Cacheados" por lo cual, las posteriores consultas deberían resultar ser mas rápidas. 
+ Como además CodeIgniter ofrece la utilización de Cachè, las consultas obendrá un mejor desempeño, ya que luego de realizar una de las query, los datos estarán "Cacheados" por lo cual, las posteriores consultas deberían resultar ser más rápidas. 
  
- \section{Pruebas de carga realizadas a la iteración 3}
+ \subsubsection{Pruebas de carga realizadas a la iteración 4}
  
- La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
- en un segundo y un ciclo de pruebas.\\
+La prueba se configuro bajo las siguientes condiciones
+
+\begin{itemize}
+	\item Número de hilos: 10
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
  
- Los resultados obtenidos son los siguientes:
+Los resultados obtenidos son los siguientes:
  
  \begin{figure}[htb]
  	\label{Figura13}
  	\begin{center}
- 		\includegraphics[scale=0.7]{imagenes/iteracion2-codeigniter.png}
- 		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+ 		\includegraphics[scale=0.6]{imagenes/ite4.png}
+ 		\caption{Tabla resumen iteración 4}
  	\end{center}
  \end{figure}
+
+ Se observa leve mejora frente a la iteración 3, aún así las pruebas no reflejan mejoras frente a la iteración 2, que es hasta el momento la cual ha presentado un mejor rendimiento.
+
+ \newpage
  
-\section{Iteración 4 (Paginación de los resultados de las query)}  
+\subsection{Iteración 5 (Paginación de los resultados de las query)}
 
-\section{Pruebas de carga realizadas a la iteración 4}
+En esta iteración se ha optado por entregar el set de resultados separados por páginas. Utilizando peticiones asincronas al servidor se puede lograr que el rendimiento mejore.
 
-La realización de las pruebas de carga de esta iteración se realizó con una cantidad 10 hilos(10 usuarios intentando acceder al servidor)
-en un segundo y un ciclo de pruebas.\\
+Para las peticiones asincronas se ha utilizado javascript, así se le entrega cierta carga al cliente para la paginación.
+
+\subsubsection{Pruebas de carga realizadas a la iteración 5}
+
+La prueba se configuro bajo las siguientes condiciones
+
+\begin{itemize}
+	\item Número de hilos: 20
+	\item Periodo de subida: 10 seg.
+	\item Ciclos: 1
+\end{itemize}
 
 Los resultados obtenidos son los siguientes:
 
 \begin{figure}[htb]
 	\label{Figura14}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagenes/iteracion3-cacheCodeIgniter.png}
-		\caption{Figura que muestra los resultados obtenidos con las pruebas de carga.}
+		\includegraphics[scale=0.6]{imagenes/ite5.png}
+		\caption{Tabla resumen iteración 5}
 	\end{center}
 \end{figure}
 
+En esta iteración se ha alcanzo buenos indices de rendimiento, mejores que los obtenidos en las iteraciones anteriores. Por lo que se concluye que el "cuello de botella" de las consultas era la cantidad de datos a transferir, y no el tiempo que toma en realizar un petición al servidor de base de datos. Esta última iteración ha solucionado este punto y entrega el mejor rendimineto de las 3 consultas.
 

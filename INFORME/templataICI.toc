@@ -8,17 +8,19 @@
 \contentsline {subsection}{\numberline {0.1.5}Jmeter}{8}{subsection.0.1.5}
 \contentsline {subsection}{\numberline {0.1.6}Base de Datos utilizada}{9}{subsection.0.1.6}
 \contentsline {section}{\numberline {0.2}Definici\IeC {\'o}n de la tarea}{10}{section.0.2}
-\contentsline {section}{\numberline {0.3}Consultas B\IeC {\'a}sicas a la base de datos mediante una interf\IeC {\'a}z web}{10}{section.0.3}
-\contentsline {subsubsection}{Consulta 1}{10}{section*.5}
-\contentsline {subsubsection}{Consulta 2}{11}{section*.6}
-\contentsline {subsubsection}{Consulta 3}{12}{section*.7}
-\contentsline {section}{\numberline {0.4}Pruebas realizadas a la iteraci\IeC {\'o}n 0}{13}{section.0.4}
-\contentsline {section}{\numberline {0.5}Iteraci\IeC {\'o}n 1 ( Mejorando las consultas MySql)}{14}{section.0.5}
-\contentsline {section}{\numberline {0.6}Pruebas de carga a la iteraci\IeC {\'o}n 1}{15}{section.0.6}
-\contentsline {section}{\numberline {0.7}Iteraci\IeC {\'o}n 2 (Utilizando CodeIgniter)}{15}{section.0.7}
-\contentsline {section}{\numberline {0.8}Pruebas de carga realizadas a la iteraci\IeC {\'o}n 2}{16}{section.0.8}
-\contentsline {section}{\numberline {0.9}Iteraci\IeC {\'o}n 3 (Utilizando la opci\IeC {\'o}n de Cach\IeC {\`e} en CodeIgniter))}{16}{section.0.9}
-\contentsline {section}{\numberline {0.10}Pruebas de carga realizadas a la iteraci\IeC {\'o}n 3}{16}{section.0.10}
-\contentsline {section}{\numberline {0.11}Iteraci\IeC {\'o}n 4 (Paginaci\IeC {\'o}n de los resultados de las query)}{17}{section.0.11}
-\contentsline {section}{\numberline {0.12}Pruebas de carga realizadas a la iteraci\IeC {\'o}n 4}{17}{section.0.12}
-\contentsline {chapter}{Bibliograf\'{\i }a}{18}{chapter*.8}
+\contentsline {section}{\numberline {0.3}Consultas B\IeC {\'a}sicas}{10}{section.0.3}
+\contentsline {subsection}{\numberline {0.3.1}Consulta 1}{11}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {0.3.2}Consulta 2}{12}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {0.3.3}Consulta 3}{13}{subsection.0.3.3}
+\contentsline {section}{\numberline {0.4}Pruebas de carga}{14}{section.0.4}
+\contentsline {subsection}{\numberline {0.4.1}Iteraci\IeC {\'o}n 1}{14}{subsection.0.4.1}
+\contentsline {subsubsection}{Pruebas de carga a la iteraci\IeC {\'o}n 1}{15}{section*.5}
+\contentsline {subsection}{\numberline {0.4.2}Iteraci\IeC {\'o}n 2 ( Mejorando las consultas MySql)}{15}{subsection.0.4.2}
+\contentsline {subsubsection}{Pruebas de carga a la iteraci\IeC {\'o}n 2}{16}{section*.6}
+\contentsline {subsection}{\numberline {0.4.3}Iteraci\IeC {\'o}n 3 (Utilizando CodeIgniter)}{16}{subsection.0.4.3}
+\contentsline {subsubsection}{Pruebas de carga realizadas a la iteraci\IeC {\'o}n 3}{17}{section*.7}
+\contentsline {subsection}{\numberline {0.4.4}Iteraci\IeC {\'o}n 4 (Utilizando la opci\IeC {\'o}n de Cach\IeC {\`e} en CodeIgniter))}{18}{subsection.0.4.4}
+\contentsline {subsubsection}{Pruebas de carga realizadas a la iteraci\IeC {\'o}n 4}{18}{section*.8}
+\contentsline {subsection}{\numberline {0.4.5}Iteraci\IeC {\'o}n 5 (Paginaci\IeC {\'o}n de los resultados de las query)}{19}{subsection.0.4.5}
+\contentsline {subsubsection}{Pruebas de carga realizadas a la iteraci\IeC {\'o}n 5}{19}{section*.9}
+\contentsline {chapter}{Bibliograf\'{\i }a}{20}{chapter*.10}
